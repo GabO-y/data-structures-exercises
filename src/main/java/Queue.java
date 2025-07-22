@@ -27,6 +27,10 @@ public class Queue<T> {
         return element;
     }
 
+    public Element<T> top(){
+        return element;
+    }
+
 
     @Override
     public String toString(){
