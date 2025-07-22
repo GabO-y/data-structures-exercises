@@ -1,2 +1,5 @@
-public class List {
+public class List<T> {
+
+    private Element<T> element;
+
 }
