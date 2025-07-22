@@ -1,3 +1,5 @@
+package Entity;
+
 public class Element<T> {
 
     private T value;
