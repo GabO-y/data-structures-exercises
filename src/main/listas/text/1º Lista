@@ -30,7 +30,7 @@ X 8. Implemente em **Lista** o método `addElemento(int valor, int pos)` que adi
 
 X 9. Implemente uma classe **ListaDupla** que implementa o duplo encadeamento dos blocos. Sendo assim o Bloco precisa ser também modificado.
 
-10. Implemente a **Lista** com array ao invés de uma lista encadeada. No array, blocos também serão adicionados.
+X 10. Implemente a **Lista** com array ao invés de uma lista encadeada. No array, blocos também serão adicionados.
 
 11. Implemente a classe **ListaRecursiva** que define métodos recursivos de localizar e de tamanho.
 Lembre-se que os métodos devem ser declarados como `private` para não ficarem disponíveis para o usuário programador.
