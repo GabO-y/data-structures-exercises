@@ -11,22 +11,26 @@ public class List<T> {
         public List(){}
 
         public Element<T> add(T value){
+            return addLast(value);
+        }
 
-            if(element == null){
+        public Element<T> addElementByPosition(int index, T value){
+
+            if(isEmpty()){
                 element = new Element<>(value);
                 return element;
             }
 
-            var current = element;
+            if(index <= 1) return addFirst(value);
+            if(index > size()) return addLast(value);
 
-            while(current.getNext() != null){
-                current = current.getNext();
-            }
+            var pre = get(index - 1);
+            var next = get(index);
 
-            current.setNext(new Element<>(value));
+            pre.setNext(new Element<>(value));
+            pre.getNext().setNext(next);
 
-            return current.getNext();
-
+            return pre.getNext();
         }
 
         public Element<T> get(int index){
@@ -154,6 +158,32 @@ public class List<T> {
 
             return list;
 
+        }
+
+        public Element<T> addFirst(T value){
+
+            if(isEmpty()){
+                element = new Element<>(value);
+                return element;
+            }
+
+            var first = new Element<>(value);
+            first.setNext(element);
+            element = first;
+
+            return element;
+        }
+
+        public Element<T> addLast(T value){
+
+            if(isEmpty()){
+                element = new Element<>(value);
+                return element;
+            }
+
+            var last = new Element<>(value);
+            getLast().setNext(last);
+            return last;
         }
 
         public boolean isEmpty(){
