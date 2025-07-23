@@ -1,13 +1,12 @@
 package Main;
 
-import Entity.Queue;
-import Entity.Stack;
+import Entity.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        Stack<Integer> l = new Stack<>(){{
+        List<Integer> l = new List<>(){{
 
             add(1);
             add(2);
@@ -17,14 +16,16 @@ public class Main {
             add(6);
             add(7);
             add(8);
+            add(9);
+            add(10);
+            add(11);
+            add(12);
+            add(13);
 
         }};
 
-        Queue<Integer> queue = l.toQueue();
-        l = queue.toStack();
-
-        System.out.println(queue);
         System.out.println(l);
+        System.out.println(l.invert());
 
     }
 

@@ -136,6 +136,26 @@ public class List<T> {
 
         }
 
+        public List<T> invert(){
+
+            if(isEmpty()) return null;
+
+            List<T> list = new List<>();
+            var current = getLast();
+
+            int i = (int) size();
+
+            while(i-- > 1){
+                list.add(current.getValue());
+                current = get(i);
+            }
+
+            list.add(getFirst().getValue());
+
+            return list;
+
+        }
+
         public boolean isEmpty(){
             return element == null;
         }
