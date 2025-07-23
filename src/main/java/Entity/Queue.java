@@ -13,8 +13,7 @@ public class Queue<T> extends List<T> {
     }
 
     public Element<T> pop(){
-        element = element.getNext();
-        return element;
+        return removeFirst();
     }
 
 }

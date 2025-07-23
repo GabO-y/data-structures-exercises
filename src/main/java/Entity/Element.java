@@ -27,6 +27,8 @@ public class Element<T> {
         this.next = next;
     }
 
-
-
+    @Override
+    public String toString() {
+        return "(" + value + ") -> " + next;
+    }
 }
