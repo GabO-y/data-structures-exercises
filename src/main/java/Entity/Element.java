@@ -29,6 +29,6 @@ public class Element<T> {
 
     @Override
     public String toString() {
-        return "(" + value + ") -> " + next;
+        return "(" + value + ")";
     }
 }

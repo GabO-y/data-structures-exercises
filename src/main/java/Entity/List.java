@@ -29,6 +29,47 @@ public class List<T> {
 
         }
 
+        public Element<T> get(int index){
+
+            if(index < 1 || index > size()){
+                throw new IndexOutOfBoundsException("index: " + index + " is out of the bounds");
+            }
+
+            if(index == 1){
+                return getFirst();
+            }
+
+            if(index == size()){
+                return getLast();
+            }
+
+            if(isEmpty()) return null;
+
+            var current = element;
+
+            for(int i = 0; i < (index - 1); i++){
+                current = current.getNext();
+            }
+
+            return current;
+        }
+
+        public Element<T> getFirst(){
+            return element;
+        }
+
+        public Element<T> getLast(){
+            if(element == null) return null;
+
+            var current = element;
+
+            while(current.getNext() != null){
+                current = current.getNext();
+            }
+
+            return current;
+        }
+
         public Element<T> removeLast(){
 
             if(element == null){
@@ -78,9 +119,25 @@ public class List<T> {
 
         public String toString(){
 
-            if(element == null) return "empty";
+            if(isEmpty()) return "empty";
 
-            return element.toString();
+            StringBuilder string = new StringBuilder();
+
+            var current = element;
+
+            while (current != null){
+                string.append(current).append(" -> ");
+                current = current.getNext();
+            }
+
+            string.append("null");
+
+            return string.toString();
+
+        }
+
+        public boolean isEmpty(){
+            return element == null;
         }
 
     }
