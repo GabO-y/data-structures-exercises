@@ -28,7 +28,7 @@ X 7. Na classe **Lista**, implemente o método `inverte` que retorna uma Lista c
 
 X 8. Implemente em **Lista** o método `addElemento(int valor, int pos)` que adiciona um elemento na posição especificada. A posição pode ou não existir.
 
-9. Implemente uma classe **ListaDupla** que implementa o duplo encadeamento dos blocos. Sendo assim o Bloco precisa ser também modificado.
+X 9. Implemente uma classe **ListaDupla** que implementa o duplo encadeamento dos blocos. Sendo assim o Bloco precisa ser também modificado.
 
 10. Implemente a **Lista** com array ao invés de uma lista encadeada. No array, blocos também serão adicionados.
 

@@ -160,9 +160,9 @@ public class List<T> {
 
         }
 
-        public Element<T> addFirst(T value){
+        public Element<T> addFirst(T value) {
 
-            if(isEmpty()){
+            if (isEmpty()) {
                 element = new Element<>(value);
                 return element;
             }

@@ -1,12 +1,13 @@
 package Main;
 
+import Entity.DualList;
 import Entity.List;
 
 public class Main {
 
     public static void main(String[] args) {
 
-        List<Integer> l = new List<>(){{
+        DualList<Integer> l = new DualList<>(){{
 
             add(1);
             add(2);
@@ -14,13 +15,22 @@ public class Main {
             add(4);
             add(5);
             add(7);
-            addElementByPosition(898, 6);
+            add(8);
 
+
+            removeFirst();
+            removeFirst();
+
+            removeLast();
+            removeLast();
 
         }};
 
-        System.out.println(l);
-        System.out.println(l.size());
+        System.out.println(l + "\n");
+
+        for(int i = 0; i < l.size(); i++){
+            System.out.println(l.get(i + 1).test());
+        }
 
 
     }
