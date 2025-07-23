@@ -16,4 +16,19 @@ public class Queue<T> extends List<T> {
         return removeFirst();
     }
 
+    public Stack<T> toStack(){
+
+        if(isEmpty()) return null;
+
+        var current = element;
+        Stack<T> stack = new Stack<>();
+
+        while(current != null){
+            stack.add(current.getValue());
+            current = current.getNext();
+        }
+
+        return stack;
+    }
+
 }
